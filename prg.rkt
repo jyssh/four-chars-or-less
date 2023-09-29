@@ -7,7 +7,7 @@
   (foldl remove-substr str substrs))
 
 (define (get-domain-name url)
-  (define trimmed (remove-substrs '("https://" "http://" "www") url))
+  (define trimmed (remove-substrs '("https://" "http://" "www.") url))
   (define domain-frags (string-split trimmed "."))
   (car domain-frags))
 
@@ -15,4 +15,6 @@
   (define name (get-domain-name url))
   (<= (string-length name) 4))
 
-(filter 4-chars-or-less? '("www.google.com" "https://stfj.net"))
+(filter 
+  4-chars-or-less? 
+  '("www.google.com" "https://stfj.net" "https://jysh.net" "https://bhoot.sh"))
