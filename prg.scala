@@ -14,6 +14,8 @@ def isFourCharsOrLess(url: String) =
   name.length <= 4
 
 @main def main() =
-  List("https://google.com", "https://stfj.net", "https://jysh.net")
+  scala.io.Source
+    .fromFile("input.txt")
+    .getLines
     .filter(isFourCharsOrLess)
     .foreach(println)

@@ -16,6 +16,8 @@ let is_four_chars_or_less url =
     String.length name <= 4
 
 let () = 
-    ["www.google.com"; "https://stfj.net"; "https://jysh.net"]
+    "input.txt" 
+    |> Arg.read_arg 
+    |> Array.to_list
     |> List.filter is_four_chars_or_less 
     |> List.iter (fun v -> Printf.printf "%s\n" v)

@@ -1,7 +1,5 @@
 (ql:quickload "str")
 
-(require :uiop)
-
 (defun remove-substr (str substr)
   (str:replace-all substr "" str))
 
@@ -19,6 +17,6 @@
 (four-chars-or-less "https://www.jyssh.net") 
 
 (loop
-  for url in '("https://google.com" "https://www.stfj.net" "https://jysh.net")
+  for url in (uiop:read-file-lines "input.txt")
   when (four-chars-or-less url)
     collect url)

@@ -17,4 +17,4 @@
 
 (filter 
   4-chars-or-less? 
-  '("www.google.com" "https://stfj.net" "https://jysh.net" "https://bhoot.sh"))
+  (file->lines "input.txt"))
