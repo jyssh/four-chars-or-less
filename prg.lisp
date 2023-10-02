@@ -14,8 +14,6 @@
 (defun four-chars-or-less (url)
   (<= (length (get-domain-name url)) 4)) 
 
-(four-chars-or-less "https://www.jyssh.net") 
-
 (loop
   for url in (uiop:read-file-lines "input.txt")
   when (four-chars-or-less url)

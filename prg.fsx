@@ -1,8 +1,3 @@
-// Cons:
-// Because String Ops are .NET OO, type annotations are required.
-// Space sensitive syntax
-// Relatively slow reload-and-run
-
 let removeSubstr (str: string) substr =
     str.Replace(substr, "")
     
